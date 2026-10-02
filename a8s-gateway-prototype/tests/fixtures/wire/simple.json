@@ -1,0 +1,8 @@
+{
+  "id": "01M3Y7RKG00000000000000001",
+  "date": "2026-10-02T12:00:00Z",
+  "from": "analyst",
+  "to": "builder",
+  "content": "Keep $1.25, `literal`, backslash \\, Unicode λ and this newline:\nexact.",
+  "files": []
+}

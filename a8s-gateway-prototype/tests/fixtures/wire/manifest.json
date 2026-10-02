@@ -1,0 +1,44 @@
+{
+  "reference_repo": "witw-llc/ar3",
+  "reference_version": "v0.1.99",
+  "status": "synthetic fixtures; no live provider proof",
+  "remote_prefix": "a8s-test-mail",
+  "cases": [
+    {
+      "file": "simple.json",
+      "expected_mailbox": "builder",
+      "expected_key": "a8s-test-mail/builder/01M3Y7RKG00000000000000001.json"
+    },
+    {
+      "file": "namespace.json",
+      "expected_mailbox": "team",
+      "expected_key": "a8s-test-mail/team/01M3Y7RKG00000000000000002.json"
+    },
+    {
+      "file": "attachment.json",
+      "expected_mailbox": "builder",
+      "expected_key": "a8s-test-mail/builder/01M3Y7RKG00000000000000003.json"
+    },
+    {
+      "file": "receipt_inbox_write.json",
+      "expected_mailbox": "analyst",
+      "expected_key": "a8s-test-mail/analyst/01M3Y7RKG00000000000000004.json"
+    },
+    {
+      "file": "receipt_no_local_recipient.json",
+      "expected_mailbox": "analyst",
+      "expected_key": "a8s-test-mail/analyst/01M3Y7RKG00000000000000005.json"
+    },
+    {
+      "file": "conflicting_duplicate.json",
+      "conflicts_with": "simple.json",
+      "expected_result": "quarantine_content_conflict"
+    }
+  ],
+  "attachment": {
+    "file": "result.txt",
+    "bytes": 34,
+    "sha256": "6297ac8ffc861e99eb38448f23860e9bc4d775866ebf65d26219d810254db154",
+    "remote_url_is_nonresolving_fixture": true
+  }
+}

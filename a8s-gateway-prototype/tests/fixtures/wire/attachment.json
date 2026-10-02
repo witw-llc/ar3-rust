@@ -1,0 +1,15 @@
+{
+  "id": "01M3Y7RKG00000000000000003",
+  "date": "2026-10-02T12:00:00Z",
+  "from": "analyst",
+  "to": "builder",
+  "content": "A synthetic attachment.",
+  "files": [
+    {
+      "filename": "result.txt",
+      "storage": [
+        "https://objects.example.invalid/a8s-files/fixture-0001/result.txt?synthetic-signature=not-a-secret"
+      ]
+    }
+  ]
+}

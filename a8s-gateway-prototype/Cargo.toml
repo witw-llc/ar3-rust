@@ -1,0 +1,28 @@
+[package]
+name = "ar3-server-prototype"
+version = "0.0.0"
+edition = "2024"
+publish = false
+license = "Apache-2.0"
+
+[dependencies]
+axum = { version = "=0.8.9", default-features = false, features = ["http1", "json", "tokio"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal", "sync", "time"] }
+rusqlite = { version = "=0.40.2", features = ["bundled", "backup"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+ulid = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+url = "2"
+percent-encoding = "2"
+http-body = "1"
+
+[dev-dependencies]
+tempfile = "3"
+tower = { version = "0.5", features = ["util"] }
+
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 1
